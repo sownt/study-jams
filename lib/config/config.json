@@ -1,0 +1,31 @@
+{
+  "pathway": [
+    "introduction to kotlin",
+    "setup android studio",
+    "build a basic layout",
+    "kotlin fundamentals",
+    "add a button to an app",
+    "interacting with ui and state",
+    "more kotlin fundamentals",
+    "build a scrollable list",
+    "build beautiful apps",
+    "architecture components",
+    "navigation in jetpack compose",
+    "adapt for different screen sizes",
+    "get data from the internet",
+    "load and display images from the internet",
+    "introduction to sql",
+    "use room for data persistence",
+    "store and access data using keys with datastore",
+    "schedule tasks with workmanager",
+    "android views and compose in views",
+    "views in compose",
+    "compose essentials",
+    "layouts, theming, and animation",
+    "architecture and state",
+    "accessibility, testing, and performance",
+    "form factors"
+  ],
+  "start": "2023-07-14T00:00:00.000Z",
+  "end": "2023-08-12T23:59:59.000Z"
+}
