@@ -1,3 +1,5 @@
+import 'package:android_studyjams/domain/entity/award.dart';
+
 class Config {
   static List<String> pathway = [
     "introduction to programming in kotlin", // "introduction to kotlin",
@@ -28,7 +30,14 @@ class Config {
   ];
   static DateTime start = DateTime.utc(2023, 7, 14);
   static DateTime end = DateTime.utc(2023, 8, 12, 23, 59, 59);
-  static bool isValid(dynamic p) {
-    return pathway.contains(p['title']) && DateTime.parse(p['earned']).isAfter(start) && DateTime.parse(p['earned']).isBefore(end);
+  static bool isValidPathway(Award a) {
+    return pathway.contains(a.title?.toLowerCase());
+  }
+  static bool isValidDate(Award a) {
+    return DateTime.parse(a.createTime!).isAfter(start) && DateTime.parse(a.createTime!).isBefore(end);
+  }
+  static bool isValid(Award a) {
+    if (a.title == null || a.createTime == null) return false;
+    return isValidPathway(a) && isValidDate(a);
   }
 }
