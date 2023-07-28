@@ -1,11 +1,11 @@
 {
-    "name": "android_studyjams",
-    "short_name": "android_studyjams",
+    "name": "ChienBinhAndroid - Profile Validator",
+    "short_name": "Profile Validator",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Validator for ChienBinhAndroid - Google Study Jams.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
