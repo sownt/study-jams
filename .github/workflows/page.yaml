@@ -35,6 +35,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Pages
         uses: actions/configure-pages@v3
+      - name: Rewrite 404 for single-page application
+        run: mv ./site/index.html ./site/404.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
