@@ -1,0 +1,37 @@
+class AppStrings {
+  AppStrings._();
+  static const de = 'de';
+  static const en = 'en';
+  static const fr = 'fr';
+  static const ja = 'ja';
+  static const ko = 'ko';
+  static const vi = 'vi';
+  static const zh = 'zh';
+  static const ru = 'ru';
+  static const hi = 'hi';
+  static const github = 'github';
+  static const appTitle = 'app_title';
+  static const done = 'done';
+  static const earnedDate = 'earned_date';
+  static const errorOccurred = 'error_occurred';
+  static const home = 'home';
+  static const inputHint = 'input_hint';
+  static const languages = 'languages';
+  static const name = 'name';
+  static const valid = 'valid';
+  static const getDataFailed = 'get_data_failed';
+  static const homePage = 'home_page';
+  static const result = 'result';
+  static const pageNotFound = 'page_not_found';
+  static const tier = 'tier';
+  static const congratulations = 'congratulations';
+  static const letsStart = 'lets_start';
+  static const keepFighting = 'keep_fighting';
+  static const loveIt = 'love_it';
+  static const followMeOnGithub = 'follow_me_on_github';
+  static const starThisProject = 'star_this_project';
+  static const invalidEarnedDate = 'invalid_earned_date';
+  static const invalidPathway = 'invalid_pathway';
+  static const invalidBothCases = 'invalid_both_cases';
+  static const seeding = 'seeding';
+}
