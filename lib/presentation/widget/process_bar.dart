@@ -32,7 +32,7 @@ class ProcessBar extends StatelessWidget {
             Flexible(
               flex: value,
               child: Tooltip(
-                message: 'Completed: $value',
+                message: '$value',
                 child: Container(
                   decoration: BoxDecoration(
                     color: color ?? Colors.green,
@@ -48,7 +48,7 @@ class ProcessBar extends StatelessWidget {
             Flexible(
               flex: total - value,
               child: Tooltip(
-                message: 'Remaining: ${total - value}',
+                message: '${total - value}',
                 child: Container(
                   decoration: BoxDecoration(
                     color: color?.shade100 ?? Colors.green.shade100,

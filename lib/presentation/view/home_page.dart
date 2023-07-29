@@ -153,34 +153,53 @@ class HomePage extends GetResponsiveView<HomeController> {
     return options;
   }
 
+  Widget _buildSearchBar(context, width, height) {
+    return Center(
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxWidth: width,
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Center(
+              child: Image.asset(
+                'images/logo.png',
+              ),
+            ),
+            const SizedBox(
+              height: Dimensions.l,
+            ),
+            Material(
+              elevation: 4.0,
+              borderRadius: const BorderRadius.all(Radius.circular(16)),
+              child: Autocomplete<String>(
+                optionsBuilder: _buildOptions,
+                fieldViewBuilder: _buildFieldView,
+                optionsViewBuilder: (context, onSelected, options) {
+                  return AutocompleteOptions(
+                    onSelected: onSelected,
+                    options: options,
+                    maxOptionsHeight: height,
+                    maxOptionsWidth: width,
+                  );
+                },
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget? desktop() {
     return CustomScaffold(
       body: LayoutBuilder(
         builder: (context, constraints) {
-          return Center(
-            child: ConstrainedBox(
-              constraints: BoxConstraints(
-                maxWidth: max(constraints.maxWidth / 2, 584),
-              ),
-              child: Material(
-                elevation: 4.0,
-                borderRadius: const BorderRadius.all(Radius.circular(16)),
-                child: Autocomplete<String>(
-                  optionsBuilder: _buildOptions,
-                  fieldViewBuilder: _buildFieldView,
-                  optionsViewBuilder: (context, onSelected, options) {
-                    return AutocompleteOptions(
-                      onSelected: onSelected,
-                      options: options,
-                      maxOptionsHeight: constraints.maxHeight / 3,
-                      maxOptionsWidth: max(constraints.maxWidth / 2, 584),
-                    );
-                  },
-                ),
-              ),
-            ),
-          );
+          final width = min(constraints.maxWidth / 2, 584);
+          final height = constraints.maxHeight / 3;
+          return _buildSearchBar(context, width, height);
         },
       ),
       floatingActionButton: FloatingActionButton(
@@ -196,33 +215,9 @@ class HomePage extends GetResponsiveView<HomeController> {
     return CustomScaffold(
       body: LayoutBuilder(
         builder: (context, constraints) {
-          return Center(
-            child: ConstrainedBox(
-              constraints: BoxConstraints(
-                maxWidth: constraints.maxWidth / 1.2,
-              ),
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(16),
-                  ),
-                ),
-                child: Autocomplete<String>(
-                  optionsBuilder: _buildOptions,
-                  fieldViewBuilder: _buildFieldView,
-                  optionsViewBuilder: (context, onSelected, options) {
-                    return AutocompleteOptions(
-                      onSelected: onSelected,
-                      options: options,
-                      maxOptionsHeight: constraints.maxHeight / 3,
-                      maxOptionsWidth: constraints.maxWidth / 1.2,
-                    );
-                  },
-                ),
-              ),
-            ),
-          );
+          final width = constraints.maxWidth - 32;
+          final height = constraints.maxHeight / 3;
+          return _buildSearchBar(context, width, height);
         },
       ),
       floatingActionButton: FloatingActionButton(

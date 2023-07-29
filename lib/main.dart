@@ -6,6 +6,7 @@ import 'package:android_studyjams/utils/localization.g.dart';
 import 'package:android_studyjams/utils/routes.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -13,7 +14,9 @@ import 'firebase_options.dart';
 
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -21,6 +24,8 @@ void main() async {
 
   await initDependencies();
   await locator<FirebaseAnalytics>().logAppOpen();
+
+  FlutterNativeSplash.remove();
 
   usePathUrlStrategy();
   runApp(const MyApp());
