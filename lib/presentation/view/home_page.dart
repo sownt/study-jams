@@ -16,10 +16,16 @@ class HomePage extends GetResponsiveView<HomeController> {
 
   Future<void> _go(value) async {
     final username = ProfileUtils.getUsername(value);
-    if (!GetUtils.isUsername(username)) return;
+    if (!isUsername(username)) return;
     await controller.getId(username);
     if (controller.state == null || controller.state!.isEmpty) return;
     Get.toNamed('/result/${controller.state}');
+  }
+
+  bool isUsername(String s) => hasMatch(s, r'^[a-zA-Z0-9][a-zA-Z0-9_.-]+[a-zA-Z0-9]$');
+
+  bool hasMatch(String? value, String pattern) {
+    return (value == null) ? false : RegExp(pattern).hasMatch(value);
   }
 
   Widget _buildTextField(
@@ -140,7 +146,7 @@ class HomePage extends GetResponsiveView<HomeController> {
     //   return const Iterable<String>.empty();
     // }
 
-    if (GetUtils.isUsername(ProfileUtils.getUsername(textEditingValue.text))) {
+    if (isUsername(ProfileUtils.getUsername(textEditingValue.text))) {
       return [
         ProfileUtils.getUsername(textEditingValue.text),
         ...options
