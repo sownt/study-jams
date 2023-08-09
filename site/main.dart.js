@@ -44332,7 +44332,7 @@ A.oA.prototype={
 qM(a){var s=0,r=A.T(t.H),q,p=this,o,n,m
 var $async$qM=A.U(function(b,c){if(b===1)return A.Q(c,r)
 while(true)switch(s){case 0:n=B.c.p(a,"://")?B.b.gO(A.fb(a,0,null).gm0()):a
-m=A.en("^[a-zA-Z0-9][a-zA-Z0-9_.]+[a-zA-Z0-9]$",!0,!1)
+m=A.en("^[a-zA-Z0-9][a-zA-Z0-9_.-]+[a-zA-Z0-9]$",!0,!1)
 m=m.b.test(n)
 if(!m){s=1
 break}m=$.bb
@@ -44380,7 +44380,7 @@ r.toString
 return A.ari(r,new A.a4K(s,a,b,c,d),s.JH(a,b,c,d),new A.a4L(s,a,b,c,d),s.a0W(a,b,c,d,!0))},
 a0Q(a){var s,r=t.s,q=A.a(["https://g.dev/","https://developers.google.com/profile/u/"],r),p=J.ch(a),o=p.gc5(a)
 if(B.c.p(o,"://"))o=B.b.gO(A.fb(o,0,null).gm0())
-s=A.en("^[a-zA-Z0-9][a-zA-Z0-9_.]+[a-zA-Z0-9]$",!0,!1)
+s=A.en("^[a-zA-Z0-9][a-zA-Z0-9_.-]+[a-zA-Z0-9]$",!0,!1)
 o=s.b.test(o)
 if(o){p=p.gc5(a)
 r=A.a([B.c.p(p,"://")?B.b.gO(A.fb(p,0,null).gm0()):p],r)
