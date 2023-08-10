@@ -1,8 +1,9 @@
 # Profile Validator for #ChienBinhAndroid
 
-### Structure
+### Structures
 ```
 .
+├── bot             // Telegram Bot
 ├── images
 ├── lib             // Flutter Web App
 ├── LICENSE
