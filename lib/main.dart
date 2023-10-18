@@ -25,10 +25,10 @@ void main() async {
   await initDependencies();
   await locator<FirebaseAnalytics>().logAppOpen();
 
-  FlutterNativeSplash.remove();
-
   usePathUrlStrategy();
   runApp(const MyApp());
+
+  FlutterNativeSplash.remove();
 }
 
 class MyApp extends StatelessWidget {
