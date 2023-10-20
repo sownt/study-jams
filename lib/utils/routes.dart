@@ -1,6 +1,8 @@
 import 'package:android_studyjams/presentation/controller/home_controller.dart';
+import 'package:android_studyjams/presentation/controller/main_controller.dart';
 import 'package:android_studyjams/presentation/controller/result_controller.dart';
 import 'package:android_studyjams/presentation/view/home_page.dart';
+import 'package:android_studyjams/presentation/view/main_page.dart';
 import 'package:android_studyjams/presentation/view/mock.dart';
 import 'package:android_studyjams/presentation/view/not_found.dart';
 import 'package:android_studyjams/presentation/view/result_page.dart';
@@ -10,6 +12,7 @@ import 'package:get/get.dart';
 class AppRoutes {
   AppRoutes._();
 
+  static const main = '/';
   static const mock = '/mock';
   static const notFound = '/not_found';
   static const home = '/home';
@@ -31,7 +34,6 @@ class AppRoutes {
       binding: BindingsBuilder(() {
         Get.put(HomeController());
       }),
-      transition: Transition.noTransition,
     ),
     GetPage(
       name: result,
@@ -39,7 +41,15 @@ class AppRoutes {
       binding: BindingsBuilder(() {
         Get.put(ResultController());
       }),
-      transition: Transition.noTransition,
+    ),
+    GetPage(
+      name: main,
+      page: () => MainPage(),
+      binding: BindingsBuilder(
+        () {
+          Get.put(MainController());
+        },
+      ),
     ),
   ];
 
@@ -50,6 +60,8 @@ class AppRoutes {
       return AppStrings.result.tr;
     } else if (Get.currentRoute == AppRoutes.notFound) {
       return AppStrings.pageNotFound.tr;
+    } else if (Get.currentRoute == AppRoutes.main) {
+      return AppStrings.name.tr;
     }
     return AppStrings.appTitle.tr;
   }
