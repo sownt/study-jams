@@ -5,9 +5,9 @@
 
 ### How to use
  - Juara Android S3
-   1. First, visit the website [https://juara.sownt.com](https://juara.sownt.com)
-   2. Enter your profile url (or your username, userId)
-   3. Press `ENTER` and get your result
+   - First, visit the website [https://juara.sownt.com](https://juara.sownt.com)
+   - Enter your profile url (or your username, userId)
+   - Press `ENTER` and get your result
 
 ### How it works
 This project includes 3 software
