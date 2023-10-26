@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:android_studyjams/locator.dart';
-import 'package:android_studyjams/theme/no_transition.dart';
 import 'package:android_studyjams/utils/localization.g.dart';
 import 'package:android_studyjams/utils/routes.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
@@ -42,11 +41,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
-        pageTransitionsTheme: NoTransition(),
       ),
       unknownRoute: AppRoutes.fallback,
       getPages: AppRoutes.pages,
-      initialRoute: AppRoutes.home,
+      initialRoute: AppRoutes.main,
       translations: Localization(),
       locale: const Locale('vi'),
       fallbackLocale: const Locale('en'),

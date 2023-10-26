@@ -25,7 +25,7 @@ class AutocompleteOptions<T extends Object> extends StatelessWidget {
     return Align(
       alignment: Alignment.topLeft,
       child: Material(
-        elevation: 4.0,
+        elevation: 8.0,
         borderRadius: const BorderRadius.vertical(
           bottom: Radius.circular(16),
         ),
