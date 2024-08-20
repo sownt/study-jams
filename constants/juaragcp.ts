@@ -8,6 +8,7 @@ export interface Course {
 }
 
 export const s10: Course[] = [
+  // Skill Badges AI/ML
   {
     name: 'Classify Images with TensorFlow on Google Cloud',
     url: 'https://www.cloudskillsboost.google/course_templates/646',
@@ -72,46 +73,7 @@ export const s10: Course[] = [
     difficulty: 'intermediate',
     duration: '5h30m',
   },
-  {
-    name: 'Create and Manage AlloyDB Instances',
-    url: 'https://www.cloudskillsboost.google/course_templates/642',
-    type: 'skill',
-    category: ['infrastructure', 'security'],
-    difficulty: 'introductory',
-    duration: '9h30m',
-  },
-  {
-    name: 'Create and Manage Cloud SQL for PostgreSQL Instances',
-    url: 'https://www.cloudskillsboost.google/course_templates/652',
-    type: 'skill',
-    category: ['infrastructure', 'security'],
-    difficulty: 'introductory',
-    duration: '4h30m',
-  },
-  {
-    name: 'Monitor and Manage Google Cloud Resources',
-    url: 'https://www.cloudskillsboost.google/course_templates/653',
-    type: 'skill',
-    category: ['infrastructure', 'security'],
-    difficulty: 'introductory',
-    duration: '3h',
-  },
-  {
-    name: 'Manage Kubernetes in Google Cloud',
-    url: 'https://www.cloudskillsboost.google/course_templates/783',
-    type: 'skill',
-    category: ['infrastructure', 'security'],
-    difficulty: 'intermediate',
-    duration: '5h',
-  },
-  {
-    name: 'Build Infrastructure with Terraform on Google Cloud',
-    url: 'https://www.cloudskillsboost.google/course_templates/636',
-    type: 'skill',
-    category: ['infrastructure', 'security'],
-    difficulty: 'intermediate',
-    duration: '5h15m',
-  },
+  // Regular
   {
     name: 'Baseline: Data, ML, AI',
     url: 'https://www.cloudskillsboost.google/course_templates/619',
@@ -232,6 +194,48 @@ export const s10: Course[] = [
     difficulty: 'introductory',
     duration: '1h30m',
   },
+  // Skill Badges Infrastructure & Security
+  {
+    name: 'Create and Manage AlloyDB Instances',
+    url: 'https://www.cloudskillsboost.google/course_templates/642',
+    type: 'skill',
+    category: ['infrastructure', 'security'],
+    difficulty: 'introductory',
+    duration: '9h30m',
+  },
+  {
+    name: 'Create and Manage Cloud SQL for PostgreSQL Instances',
+    url: 'https://www.cloudskillsboost.google/course_templates/652',
+    type: 'skill',
+    category: ['infrastructure', 'security'],
+    difficulty: 'introductory',
+    duration: '4h30m',
+  },
+  {
+    name: 'Monitor and Manage Google Cloud Resources',
+    url: 'https://www.cloudskillsboost.google/course_templates/653',
+    type: 'skill',
+    category: ['infrastructure', 'security'],
+    difficulty: 'introductory',
+    duration: '3h',
+  },
+  {
+    name: 'Manage Kubernetes in Google Cloud',
+    url: 'https://www.cloudskillsboost.google/course_templates/783',
+    type: 'skill',
+    category: ['infrastructure', 'security'],
+    difficulty: 'intermediate',
+    duration: '5h',
+  },
+  {
+    name: 'Build Infrastructure with Terraform on Google Cloud',
+    url: 'https://www.cloudskillsboost.google/course_templates/636',
+    type: 'skill',
+    category: ['infrastructure', 'security'],
+    difficulty: 'intermediate',
+    duration: '5h15m',
+  },
+  // Regular
   {
     name: 'Security Best Practices in Google Cloud',
     url: 'https://www.cloudskillsboost.google/course_templates/87',
