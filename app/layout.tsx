@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "JuaraGCP Season 10 | Tools",
   description: "Profile checker tool for #JuaraGCP Season 10",
+  icons: {
+    icon: '/icon.png',
+  }
 };
 
 export default function RootLayout({
