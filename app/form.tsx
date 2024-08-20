@@ -2,12 +2,20 @@
 import { Button, Input } from '@headlessui/react';
 import clsx from 'clsx';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Cookies from 'universal-cookie';
 
 export function Form() {
   const router = useRouter();
   const [profileUrl, setProfileUrl] = useState('');
+
+  useEffect(() => {
+    const cookies = new Cookies(null, { path: '/' });
+    const id = cookies.get('id');
+    if (id) {
+      setProfileUrl('https://www.cloudskillsboost.google/public_profiles/' + id);
+    }
+  }, []);
 
   function submit() {
     const match = profileUrl.match(/\/public_profiles\/([a-f0-9-]+)/i);

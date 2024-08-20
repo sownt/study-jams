@@ -107,10 +107,11 @@ export default async function Home() {
         </div>
         <div id="check" className="bg-neutral-900 py-16 mb-16">
           <div className="mx-auto max-w-6xl px-8">
-            <div className="flex items-center justify-center mb-8">
+            <div className="flex flex-col items-center justify-center mb-8">
               <h1 className="text-white text-2xl font-semibold">
                 Let me check your profile{data?.name ? `, ${data?.name}` : ''}
               </h1>
+              {data?.name ? <p className="text-white font-mono">{skills + regulars} badge(s) with {skills} skill badge(s)</p> : <></>}
             </div>
             <div className="mb-16">
               <Form />
