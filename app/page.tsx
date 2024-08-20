@@ -29,8 +29,8 @@ export default async function Home() {
       .filter((course) => course.type === 'regular')
       .map((badge) => badge.name);
 
-    const upper_limit = new Date('Aug 20, 2024 EDT');
-    const lower_limit = new Date('Sep 15, 2024 EDT');
+    const upper_limit = new Date('Sep 15, 2024 EDT');
+    const lower_limit = new Date('Aug 20, 2024 EDT');
     const profileBadges = data.badges ?? [];
 
     profileBadges.map((badge: { name: string; earned: string }) => {
