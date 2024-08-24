@@ -4,7 +4,10 @@ export interface Course {
   type: string;
   category: string[];
   difficulty: string;
-  duration: string;
+  duration: number;
+  labs: number;
+  earned?: Date;
+  valid?: boolean;
 }
 
 export const s10: Course[] = [
@@ -15,7 +18,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['ai', 'ml'],
     difficulty: 'intermediate',
-    duration: '7h15m',
+    duration: 435,
+    labs: 6,
   },
   {
     name: 'Build LookML Objects in Looker',
@@ -23,7 +27,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '5h15m',
+    duration: 315,
+    labs: 5,
   },
   {
     name: 'Detect Manufacturing Defects using Visual Inspection AI',
@@ -31,7 +36,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['ai', 'ml'],
     difficulty: 'intermediate',
-    duration: '7h15m',
+    duration: 435,
+    labs: 5,
   },
   {
     name: 'Analyze Speech and Language with Google APIs',
@@ -39,7 +45,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '2h45m',
+    duration: 165,
+    labs: 4,
   },
   {
     name: 'Analyze Images with the Cloud Vision API',
@@ -47,7 +54,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '3h',
+    duration: 180,
+    labs: 4,
   },
   {
     name: 'Analyze Sentiment with Natural Language API',
@@ -55,7 +63,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '3h',
+    duration: 180,
+    labs: 4,
   },
   {
     name: 'Perform Predictive Data Analysis in BigQuery',
@@ -63,7 +72,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['ai', 'ml'],
     difficulty: 'intermediate',
-    duration: '4h45m',
+    duration: 285,
+    labs: 5,
   },
   {
     name: 'Create ML Models with BigQuery ML',
@@ -71,7 +81,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['ai', 'ml'],
     difficulty: 'intermediate',
-    duration: '5h30m',
+    duration: 330,
+    labs: 5,
   },
   // Regular
   {
@@ -80,7 +91,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '5h',
+    duration: 300,
+    labs: 6,
   },
   {
     name: 'Intro to ML: Language Processing',
@@ -88,7 +100,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '4h',
+    duration: 240,
+    labs: 5,
   },
   {
     name: 'Intro to ML: Image Processing',
@@ -96,7 +109,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '4h45m',
+    duration: 285,
+    labs: 5,
   },
   {
     name: 'Generative AI Explorer - Vertex AI',
@@ -104,7 +118,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '4h15m',
+    duration: 255,
+    labs: 3,
   },
   {
     name: 'Google Cloud Computing Foundations: Data, ML, and AI in Google Cloud',
@@ -112,7 +127,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '8h',
+    duration: 480,
+    labs: 5,
   },
   {
     name: 'Managing Machine Learning Projects with Google Cloud',
@@ -120,7 +136,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '24h',
+    duration: 1440,
+    labs: 4,
   },
   {
     name: 'Introduction to AI and Machine Learning on Google Cloud',
@@ -128,7 +145,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '8h',
+    duration: 480,
+    labs: 4,
   },
   {
     name: 'Google Cloud Big Data and Machine Learning Fundamentals',
@@ -136,7 +154,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '5h',
+    duration: 300,
+    labs: 4,
   },
   {
     name: 'Applying Machine Learning to your Data with Google Cloud',
@@ -144,7 +163,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '16h',
+    duration: 960,
+    labs: 4,
   },
   {
     name: 'Production Machine Learning Systems',
@@ -152,7 +172,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'intermediate',
-    duration: '16h',
+    duration: 960,
+    labs: 7,
   },
   {
     name: 'Smart Analytics, Machine Learning, and AI on Google Cloud',
@@ -160,7 +181,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'intermediate',
-    duration: '7h',
+    duration: 420,
+    labs: 6,
   },
   {
     name: 'ML Pipelines on Google Cloud',
@@ -168,7 +190,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'advanced',
-    duration: '13h15m',
+    duration: 795,
+    labs: 6,
   },
   {
     name: 'Integrating Applications with Gemini 1.0 Pro on Google Cloud',
@@ -176,7 +199,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '1h45m',
+    duration: 105,
+    labs: 1,
   },
   {
     name: 'Gemini for Data Scientists and Analysts',
@@ -184,7 +208,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '2h',
+    duration: 120,
+    labs: 2,
   },
   {
     name: 'Gemini for Application Developers',
@@ -192,7 +217,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['ai', 'ml'],
     difficulty: 'introductory',
-    duration: '1h30m',
+    duration: 90,
+    labs: 1,
   },
   // Skill Badges Infrastructure & Security
   {
@@ -201,7 +227,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['infrastructure', 'security'],
     difficulty: 'introductory',
-    duration: '9h30m',
+    duration: 570,
+    labs: 6,
   },
   {
     name: 'Create and Manage Cloud SQL for PostgreSQL Instances',
@@ -209,7 +236,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['infrastructure', 'security'],
     difficulty: 'introductory',
-    duration: '4h30m',
+    duration: 270,
+    labs: 5,
   },
   {
     name: 'Monitor and Manage Google Cloud Resources',
@@ -217,7 +245,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['infrastructure', 'security'],
     difficulty: 'introductory',
-    duration: '3h',
+    duration: 180,
+    labs: 5,
   },
   {
     name: 'Manage Kubernetes in Google Cloud',
@@ -225,7 +254,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['infrastructure', 'security'],
     difficulty: 'intermediate',
-    duration: '5h',
+    duration: 300,
+    labs: 4,
   },
   {
     name: 'Build Infrastructure with Terraform on Google Cloud',
@@ -233,7 +263,8 @@ export const s10: Course[] = [
     type: 'skill',
     category: ['infrastructure', 'security'],
     difficulty: 'intermediate',
-    duration: '5h15m',
+    duration: 315,
+    labs: 5,
   },
   // Regular
   {
@@ -242,7 +273,8 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['infrastructure', 'security'],
     difficulty: 'introductory',
-    duration: '11h15m',
+    duration: 675,
+    labs: 7,
   },
   {
     name: 'Mitigating Security Vulnerabilities on Google Cloud',
@@ -250,6 +282,7 @@ export const s10: Course[] = [
     type: 'regular',
     category: ['infrastructure', 'security'],
     difficulty: 'introductory',
-    duration: '5h',
+    duration: 300,
+    labs: 4,
   },
 ];
