@@ -14,6 +14,8 @@
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.53.0",
+    "swr": "^2.2.5",
     "universal-cookie": "^7.2.0"
   },
   "devDependencies": {

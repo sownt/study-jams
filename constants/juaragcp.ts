@@ -10,6 +10,17 @@ export interface Course {
   valid?: boolean;
 }
 
+export interface Badge {
+  name: string;
+  url: string;
+  
+}
+
+export interface ProfileMeta {
+  name: string;
+
+}
+
 export const s10: Course[] = [
   // Skill Badges AI/ML
   {
